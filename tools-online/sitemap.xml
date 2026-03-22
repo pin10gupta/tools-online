@@ -50,4 +50,41 @@
     <changefreq>weekly</changefreq>
   </url>
 
+  <!-- Tools -->
+  <url>
+    <loc>https://tools-online.dev-pintugupta.workers.dev/word-counter.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tools-online.dev-pintugupta.workers.dev/password-generator.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tools-online.dev-pintugupta.workers.dev/bmi-calculator.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tools-online.dev-pintugupta.workers.dev/age-calculator.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tools-online.dev-pintugupta.workers.dev/random-number-generator.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://tools-online.dev-pintugupta.workers.dev/emi-calculator.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
 </urlset>
