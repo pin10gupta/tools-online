@@ -1,4 +1,11 @@
+# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
 
+# Block sensitive files or directories (if any exist)
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+# Sitemap reference
 Sitemap: https://tools-online.dev-pintugupta.workers.dev/sitemap.xml
