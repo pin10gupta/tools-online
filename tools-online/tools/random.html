@@ -3,14 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Random Number Generator - Tools Online</title>
-  <meta name="description" content="Free random number generator for games, simulations, and decision-making.">
 </head>
 <body>
   <h1>Random Number Generator</h1>
-  <p>Random numbers are essential in games, simulations, and decision-making. Use this tool to generate unbiased random numbers for contests, experiments, or everyday choices.</p>
+  <p>Generate unbiased random numbers.</p>
 
-  <!-- Your existing random number generator functionality here -->
+  <label>Min: <input type="number" id="min" value="1"></label>
+  <label>Max: <input type="number" id="max" value="100"></label>
+  <button onclick="generateRandom()">Generate</button>
 
-  <footer>…same footer…</footer>
+  <p id="randomResult"></p>
+
+  <script>
+    function generateRandom() {
+      let min = parseInt(document.getElementById("min").value);
+      let max = parseInt(document.getElementById("max").value);
+      let random = Math.floor(Math.random() * (max - min + 1)) + min;
+      document.getElementById("randomResult").innerText =
+        "Random Number: " + random;
+    }
+  </script>
+
+  <footer>© 2026 Tools Online | Created by Pintu Gupta</footer>
 </body>
 </html>
