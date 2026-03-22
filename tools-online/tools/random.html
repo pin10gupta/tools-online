@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random Number</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header><h1>Random Number Generator</h1></header>
+
+<main>
+
+<div class="card">
+<button onclick="gen()">Generate</button>
+<p id="num"></p>
+</div>
+
+<div class="card">
+<p>Generate random numbers instantly using this tool.</p>
+</div>
+
+</main>
+
+<script>
+function gen(){
+ document.getElementById("num").innerText=Math.floor(Math.random()*100);
+}
+</script>
+
+</body>
+</html>

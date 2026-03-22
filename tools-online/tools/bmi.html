@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BMI Calculator</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+<h1>🔧 Smart Tools Hub</h1>
+</header>
+
+<main>
+
+<div class="card">
+<h2>BMI Calculator</h2>
+
+<input id="w" placeholder="Weight (kg)"><br><br>
+<input id="h" placeholder="Height (m)"><br><br>
+
+<button onclick="calc()">Calculate</button>
+<p id="res"></p>
+</div>
+
+<div class="card">
+<h3>About BMI</h3>
+<p>BMI helps you understand whether your body weight is healthy based on your height.</p>
+
+<h3>How to Use</h3>
+<p>Enter weight and height, then click calculate.</p>
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 Smart Tools Hub | @Pintu Gupta</p>
+</footer>
+
+<script>
+function calc(){
+ let w=document.getElementById("w").value;
+ let h=document.getElementById("h").value;
+ let bmi=w/(h*h);
+ document.getElementById("res").innerText="BMI: "+bmi.toFixed(2);
+}
+</script>
+
+</body>
+</html>

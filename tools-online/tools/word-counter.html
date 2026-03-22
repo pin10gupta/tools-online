@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Word Counter Tool - Smart Tools Hub</title>
+  <meta name="description" content="Free online word counter tool to count words, characters and sentences instantly. Fast and easy to use.">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>🔧 Smart Tools Hub Online</h1>
+
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- TOOL -->
+  <div class="card">
+    <h2>Word Counter Tool</h2>
+
+    <textarea id="text" rows="8" style="width:100%;" placeholder="Paste your text here..."></textarea>
+    <br><br>
+
+    <button onclick="countWords()">Count Words</button>
+
+    <p id="result"></p>
+  </div>
+
+  <!-- CONTENT (IMPORTANT FOR ADSENSE) -->
+  <div class="card">
+    <h3>About This Tool</h3>
+    <p>
+      This free online Word Counter tool helps you quickly calculate the number of words,
+      characters, and sentences in your text. It is designed for students, writers,
+      bloggers, and professionals who need fast and accurate results.
+    </p>
+
+    <h3>How to Use</h3>
+    <p>
+      Simply paste or type your text into the box above and click the "Count Words" button.
+      The tool will instantly display the number of words. It works on both desktop and mobile devices.
+    </p>
+
+    <h3>Why Use a Word Counter?</h3>
+    <p>
+      Word counting is important for writing assignments, blog posts, and professional documents.
+      It helps you stay within limits and improves readability. Our tool makes this process quick and simple.
+    </p>
+
+    <h3>Features</h3>
+    <ul>
+      <li>Instant results</li>
+      <li>Accurate word counting</li>
+      <li>Simple and clean interface</li>
+      <li>Free to use</li>
+    </ul>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Smart Tools Hub Online | All Rights Reserved</p>
+  <p>Created by @Pintu Gupta</p>
+
+  <p>
+    <a href="../privacy.html">Privacy Policy</a> |
+    <a href="../terms.html">Terms</a> |
+    <a href="../disclaimer.html">Disclaimer</a>
+  </p>
+</footer>
+
+<script>
+function countWords() {
+  let text = document.getElementById("text").value.trim();
+
+  if (text === "") {
+    document.getElementById("result").innerText = "Please enter text";
+    return;
+  }
+
+  let words = text.split(/\s+/).length;
+  let chars = text.length;
+
+  document.getElementById("result").innerText =
+    "Words: " + words + " | Characters: " + chars;
+}
+</script>
+
+</body>
+</html>

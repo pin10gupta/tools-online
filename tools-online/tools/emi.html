@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EMI Calculator</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Loan EMI Calculator</h1>
+</header>
+
+<main>
+
+<div class="card">
+<input id="p" placeholder="Loan Amount"><br><br>
+<input id="r" placeholder="Interest Rate (%)"><br><br>
+<input id="t" placeholder="Time (months)"><br><br>
+
+<button onclick="calcEMI()">Calculate EMI</button>
+
+<p id="emi"></p>
+</div>
+
+<div class="card">
+<h3>About EMI</h3>
+<p>EMI (Equated Monthly Installment) is the amount you pay monthly for a loan.</p>
+
+<h3>How to Use</h3>
+<p>Enter loan amount, interest rate, and duration.</p>
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 Smart Tools Hub | @Pintu Gupta</p>
+</footer>
+
+<script>
+function calcEMI(){
+ let p=document.getElementById("p").value;
+ let r=document.getElementById("r").value/12/100;
+ let t=document.getElementById("t").value;
+
+ let emi=(p*r*Math.pow(1+r,t))/(Math.pow(1+r,t)-1);
+
+ document.getElementById("emi").innerText="EMI: "+emi.toFixed(2);
+}
+</script>
+
+</body>
+</html>
