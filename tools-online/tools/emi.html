@@ -3,14 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>EMI Calculator - Tools Online</title>
-  <meta name="description" content="Free EMI calculator to plan your loan repayments easily.">
 </head>
 <body>
   <h1>EMI Calculator</h1>
-  <p>EMI (Equated Monthly Installment) is the fixed payment you make every month towards a loan. Our EMI Calculator helps you plan your finances by showing the monthly amount based on loan amount, interest rate, and tenure.</p>
+  <p>Plan your loan repayments easily.</p>
 
-  <!-- Your existing EMI calculator functionality here -->
+  <label>Loan Amount (₹): <input type="number" id="loan"></label><br>
+  <label>Annual Interest Rate (%): <input type="number" id="rate"></label><br>
+  <label>Tenure (months): <input type="number" id="months"></label><br>
+  <button onclick="calculateEMI()">Calculate</button>
 
-  <footer>…same footer…</footer>
+  <p id="emiResult"></p>
+
+  <script>
+    function calculateEMI() {
+      let loan = document.getElementById("loan").value;
+      let rate = document.getElementById("rate").value / 12 / 100;
+      let months = document.getElementById("months").value;
+      let emi = (loan * rate * Math.pow(1 + rate, months)) /
+                (Math.pow(1 + rate, months) - 1);
+      document.getElementById("emiResult").innerText =
+        "Your EMI: ₹" + emi.toFixed(2);
+    }
+  </script>
+
+  <footer>© 2026 Tools Online | Created by Pintu Gupta</footer>
 </body>
 </html>
