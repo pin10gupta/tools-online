@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tools-online.dev-pintugupta.workers.dev/sitemap.xml
