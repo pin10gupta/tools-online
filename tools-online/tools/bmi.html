@@ -1,50 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>BMI Calculator</title>
-<link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <title>BMI Calculator - Tools Online</title>
+  <meta name="description" content="Free BMI calculator to check your body mass index instantly.">
 </head>
-
 <body>
+  <h1>BMI Calculator</h1>
+  <p>BMI (Body Mass Index) is a measure of body fat based on height and weight. Use this tool to quickly calculate your BMI.</p>
 
-<header>
-<h1>🔧 Smart Tools Hub</h1>
-</header>
+  <h2>Understanding Your BMI</h2>
+  <ul>
+    <li><strong>Below 18.5:</strong> Underweight</li>
+    <li><strong>18.5 – 24.9:</strong> Normal weight</li>
+    <li><strong>25 – 29.9:</strong> Overweight</li>
+    <li><strong>30 and above:</strong> Obese</li>
+  </ul>
+  <p>Note: BMI is a general guideline and may not apply to athletes or people with high muscle mass.</p>
 
-<main>
+  <!-- Your existing BMI calculator functionality here -->
 
-<div class="card">
-<h2>BMI Calculator</h2>
-
-<input id="w" placeholder="Weight (kg)"><br><br>
-<input id="h" placeholder="Height (m)"><br><br>
-
-<button onclick="calc()">Calculate</button>
-<p id="res"></p>
-</div>
-
-<div class="card">
-<h3>About BMI</h3>
-<p>BMI helps you understand whether your body weight is healthy based on your height.</p>
-
-<h3>How to Use</h3>
-<p>Enter weight and height, then click calculate.</p>
-</div>
-
-</main>
-
-<footer>
-<p>© 2026 Smart Tools Hub | @Pintu Gupta</p>
-</footer>
-
-<script>
-function calc(){
- let w=document.getElementById("w").value;
- let h=document.getElementById("h").value;
- let bmi=w/(h*h);
- document.getElementById("res").innerText="BMI: "+bmi.toFixed(2);
-}
-</script>
-
+  <footer>…same footer…</footer>
 </body>
 </html>
