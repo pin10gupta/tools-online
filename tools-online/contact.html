@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Contact</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Contact Us - Tools Online</title>
 </head>
-
 <body>
+  <h1>Contact Us</h1>
+  <p>We’d love to hear from you! Please reach out using the form below or via email.</p>
 
-<header><h1>Contact Us</h1></header>
+  <form action="mailto:support@tools-online.dev" method="post" enctype="text/plain">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
 
-<main>
-<div class="card">
-<p>Email: dev.pintugupta@gmail.com</p>
-</div>
-</main>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
 
-<footer>
-<p>© 2026 Smart Tools Hub Online</p>
-</footer>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
+    <input type="submit" value="Send">
+  </form>
 </body>
 </html>
