@@ -1,53 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>EMI Calculator</title>
-<link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <title>EMI Calculator - Tools Online</title>
+  <meta name="description" content="Free EMI calculator to plan your loan repayments easily.">
 </head>
-
 <body>
+  <h1>EMI Calculator</h1>
+  <p>EMI (Equated Monthly Installment) is the fixed payment you make every month towards a loan. Our EMI Calculator helps you plan your finances by showing the monthly amount based on loan amount, interest rate, and tenure.</p>
 
-<header>
-<h1>Tools Online</h1>
-</header>
+  <!-- Your existing EMI calculator functionality here -->
 
-<main>
-
-<div class="card">
-<input id="p" placeholder="Loan Amount"><br><br>
-<input id="r" placeholder="Interest Rate (%)"><br><br>
-<input id="t" placeholder="Time (months)"><br><br>
-
-<button onclick="calcEMI()">Calculate EMI</button>
-
-<p id="emi"></p>
-</div>
-
-<div class="card">
-<h3>About EMI</h3>
-<p>EMI (Equated Monthly Installment) is the amount you pay monthly for a loan.</p>
-
-<h3>How to Use</h3>
-<p>Enter loan amount, interest rate, and duration.</p>
-</div>
-
-</main>
-
-<footer>
-<p>© 2026 Tools Online | @Pintu Gupta</p>
-</footer>
-
-<script>
-function calcEMI(){
- let p=document.getElementById("p").value;
- let r=document.getElementById("r").value/12/100;
- let t=document.getElementById("t").value;
-
- let emi=(p*r*Math.pow(1+r,t))/(Math.pow(1+r,t)-1);
-
- document.getElementById("emi").innerText="EMI: "+emi.toFixed(2);
-}
-</script>
-
+  <footer>…same footer…</footer>
 </body>
 </html>
