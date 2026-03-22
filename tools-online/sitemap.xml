@@ -49,6 +49,26 @@
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
+  <!-- Blog Post 1 -->
+<url>
+  <loc>https://tools-online.com/blog-post1.html</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+
+<!-- Blog Post 2 -->
+<url>
+  <loc>https://tools-online.com/blog-post2.html</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+
+<!-- Blog Post 3 -->
+<url>
+  <loc>https://tools-online.com/blog-post3.html</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
 
   <!-- Tools -->
   <url>
