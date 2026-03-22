@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Word Counter - Tools Online</title>
-  <meta name="description" content="Free online word counter tool to count words and characters instantly. Perfect for students, writers, and SEO.">
 </head>
 <body>
   <h1>Word Counter</h1>
-  <p>Our Word Counter helps writers, students, and professionals keep track of word and character limits. Whether you’re writing an essay, a blog post, or preparing content for social media, this tool ensures you stay within the required limits.</p>
+  <p>Count words and characters instantly.</p>
 
-  <!-- Your existing word counter functionality here -->
+  <textarea id="textInput" rows="10" cols="50" placeholder="Type or paste text here..."></textarea><br>
+  <button onclick="countWords()">Count</button>
 
-  <footer>
-    <p>© 2026 Tools Online | Created by Pintu Gupta</p>
-    <nav>
-      <a href="/about.html">About</a> | 
-      <a href="/privacy.html">Privacy Policy</a> | 
-      <a href="/terms.html">Terms</a> | 
-      <a href="/disclaimer.html">Disclaimer</a> | 
-      <a href="/contact.html">Contact</a> | 
-      <a href="/blog.html">Blog</a> | 
-      <a href="/sitemap.xml">Sitemap</a>
-    </nav>
-  </footer>
+  <p id="result"></p>
+
+  <script>
+    function countWords() {
+      let text = document.getElementById("textInput").value.trim();
+      let words = text.split(/\s+/).filter(word => word.length > 0).length;
+      let chars = text.length;
+      document.getElementById("result").innerHTML =
+        "Words: " + words + " | Characters: " + chars;
+    }
+  </script>
+
+  <footer>© 2026 Tools Online | Created by Pintu Gupta</footer>
 </body>
 </html>
