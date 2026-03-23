@@ -78,31 +78,41 @@
   </url>
 
   <url>
-    <loc>https://tools-online.dev-pintugupta.workers.dev/password-generator.html</loc>
+    <loc>https://tools-online.dev-pintugupta.workers.dev/password.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://tools-online.dev-pintugupta.workers.dev/bmi-calculator.html</loc>
+    <loc>https://tools-online.dev-pintugupta.workers.dev/bmi.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://tools-online.dev-pintugupta.workers.dev/age-calculator.html</loc>
+    <loc>https://tools-online.dev-pintugupta.workers.dev/age.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://tools-online.dev-pintugupta.workers.dev/random-number-generator.html</loc>
+    <loc>https://tools-online.dev-pintugupta.workers.dev/random.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://tools-online.dev-pintugupta.workers.dev/emi-calculator.html</loc>
+    <loc>https://tools-online.dev-pintugupta.workers.dev/emi.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+   <url>
+    <loc>https://tools-online.dev-pintugupta.workers.dev/unit.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://tools-online.dev-pintugupta.workers.dev/currency.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
