@@ -1,0 +1,31 @@
+<h2>Unit Converter</h2>
+<p>Enter value and select units:</p>
+<input type="number" id="unitValue" placeholder="Value">
+<select id="fromUnit">
+  <option value="m">Meters</option>
+  <option value="kg">Kilograms</option>
+  <option value="c">Celsius</option>
+</select>
+<select id="toUnit">
+  <option value="ft">Feet</option>
+  <option value="lb">Pounds</option>
+  <option value="f">Fahrenheit</option>
+</select>
+<button onclick="convertUnit()">Convert</button>
+<p id="unitResult"></p>
+
+<script>
+function convertUnit() {
+  let val = parseFloat(document.getElementById("unitValue").value);
+  let from = document.getElementById("fromUnit").value;
+  let to = document.getElementById("toUnit").value;
+  let result = "";
+
+  if(from === "m" && to === "ft") result = (val * 3.28084).toFixed(2) + " ft";
+  else if(from === "kg" && to === "lb") result = (val * 2.20462).toFixed(2) + " lb";
+  else if(from === "c" && to === "f") result = ((val * 9/5) + 32).toFixed(2) + " °F";
+  else result = "Conversion not supported.";
+
+  document.getElementById("unitResult").innerHTML = "Result: " + result;
+}
+</script>
