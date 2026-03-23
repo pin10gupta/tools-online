@@ -1,0 +1,38 @@
+<h2>Currency Converter</h2>
+<p>Enter amount and select currencies:</p>
+<input type="number" id="amount" placeholder="Amount">
+<select id="fromCurrency">
+  <option value="USD">USD</option>
+  <option value="INR">INR</option>
+  <option value="EUR">EUR</option>
+</select>
+<select id="toCurrency">
+  <option value="INR">INR</option>
+  <option value="USD">USD</option>
+  <option value="EUR">EUR</option>
+</select>
+<button onclick="convertCurrency()">Convert</button>
+<p id="currencyResult"></p>
+
+<script>
+function convertCurrency() {
+  let amount = parseFloat(document.getElementById("amount").value);
+  let from = document.getElementById("fromCurrency").value;
+  let to = document.getElementById("toCurrency").value;
+
+  // Example static rates (you can expand or connect to API)
+  let rates = {
+    "USD": {"INR": 83, "EUR": 0.92},
+    "INR": {"USD": 0.012, "EUR": 0.011},
+    "EUR": {"USD": 1.09, "INR": 90}
+  };
+
+  if(rates[from] && rates[from][to]){
+    let result = (amount * rates[from][to]).toFixed(2);
+    document.getElementById("currencyResult").innerHTML = 
+      amount + " " + from + " = " + result + " " + to;
+  } else {
+    document.getElementById("currencyResult").innerHTML = "Conversion not supported.";
+  }
+}
+</script>
