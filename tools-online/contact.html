@@ -3,35 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact Us - Tools Online</title>
+  <meta name="description" content="Get in touch with Tools Online for support, feedback, or collaboration.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Contact Us</h1>
-  <p>We’d love to hear from you! Please reach out using the form below or via email.</p>
-
-  <form action="mailto:dev.pintugupta@gmail.com" method="post" enctype="text/plain">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
-
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="5" required></textarea><br><br>
-
-    <input type="submit" value="Send">
-  </form>
-
-  <footer>
-    <p>© 2026 Tools Online | Created by Pintu Gupta</p>
-    <nav>
-      <a href="/about.html">About</a> | 
-      <a href="/privacy.html">Privacy Policy</a> | 
-      <a href="/terms.html">Terms</a> | 
-      <a href="/disclaimer.html">Disclaimer</a> | 
-      <a href="/contact.html">Contact</a> | 
-      <a href="/blog.html">Blog</a> | 
-      <a href="/sitemap.xml">Sitemap</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">🔧 Tools Online</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="disclaimer.html">Disclaimer</a>
     </nav>
+  </header>
+
+  <!-- Contact Content -->
+  <section class="content" style="padding:2rem; max-width:800px; margin:auto;">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Reach us through the following channels:</p>
+    <ul>
+      <li>Email: <strong>dev.pintugupta@gmail.com</strong></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/pintu-gupta-5900951bb/" target="_blank">Pintu Gupta</a></li>
+      <li>Twitter: <a href="#">@ToolsOnline</a></li>
+      <li>GitHub: <a href="#">Tools Online</a></li>
+    </ul>
+    <p>We typically respond within 48 hours.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Tools Online | All Rights Reserved</p>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/pintu-gupta-5900951bb/" target="_blank">LinkedIn</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">GitHub</a>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
