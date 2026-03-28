@@ -41,20 +41,20 @@ nav ul li a {
   background: #e6f2ff;
 }
 
-.tools {
+.tools, .blog {
   padding: 20px;
 }
 
-.tools ul {
+.tools ul, .blog ul {
   list-style: none;
   padding: 0;
 }
 
-.tools ul li {
+.tools ul li, .blog ul li {
   margin: 10px 0;
 }
 
-.tools ul li a {
+.tools ul li a, .blog ul li a {
   color: #004080;
   text-decoration: none;
   font-weight: bold;
