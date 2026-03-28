@@ -8,4 +8,4 @@ Disallow: /cgi-bin/
 Disallow: /tmp/
 
 # Sitemap reference
-Sitemap: https://tools-online.dev-pintugupta.workers.dev/sitemap.xml
+Sitemap: https://tools-online.work/sitemap.xml
