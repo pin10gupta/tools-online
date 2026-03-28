@@ -1,48 +1,162 @@
-body {
-  font-family: Arial, sans-serif;
+/* RESET */
+* {
   margin: 0;
-  background: #f9f9f9;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* BODY */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
 header {
-  background: #004aad;
-  color: #fff;
-  padding: 1rem;
+  background: linear-gradient(135deg, #1e293b, #2563eb);
+  color: white;
+  padding: 20px;
   text-align: center;
 }
 
 header h1 {
-  margin: 0;
+  margin-bottom: 10px;
 }
 
+/* NAVIGATION */
 nav {
-  margin-top: 0.5rem;
+  margin-top: 10px;
 }
 
 nav a {
-  color: #fff;
-  margin: 0 0.5rem;
+  color: #e0e7ff;
+  margin: 0 10px;
   text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
+nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* MAIN */
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+/* CARD DESIGN */
 .card {
-  background: #fff;
-  margin: 1rem auto;
-  padding: 1.5rem;
-  max-width: 800px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
 }
 
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* HEADINGS */
+h2 {
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #2563eb;
+}
+
+/* TEXTAREA + INPUT */
+textarea,
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* BUTTON */
+button {
+  background: #2563eb;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* RESULT TEXT */
+#result, #res, #out, #num, #emi, #pass {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #111827;
+}
+
+/* LIST */
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* LINKS */
+a {
+  color: #2563eb;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
 footer {
-  background: #004aad;
-  color: #fff;
+  background: #1e293b;
+  color: #cbd5f5;
   text-align: center;
-  padding: 1rem;
+  padding: 20px;
+  margin-top: 40px;
 }
 
 footer a {
-  color: #ffeb3b;
+  color: #93c5fd;
   text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
 }
