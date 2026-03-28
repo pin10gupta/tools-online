@@ -50,72 +50,61 @@
     <changefreq>weekly</changefreq>
   </url>
 
-  <!-- Blog Post 1 -->
+  <!-- Blog Posts -->
   <url>
     <loc>https://tools-online.work/blog-post1.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
-
-  <!-- Blog Post 2 -->
   <url>
     <loc>https://tools-online.work/blog-post2.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
-
-  <!-- Blog Post 3 -->
   <url>
     <loc>https://tools-online.work/blog-post3.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
-  <!-- Tools -->
+  <!-- Tools (note the /tools/ path) -->
   <url>
-    <loc>https://tools-online.work/word-counter.html</loc>
+    <loc>https://tools-online.work/tools/word-counter.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
-
   <url>
-    <loc>https://tools-online.work/password.html</loc>
+    <loc>https://tools-online.work/tools/password-generator.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
-
   <url>
-    <loc>https://tools-online.work/bmi.html</loc>
+    <loc>https://tools-online.work/tools/bmi-calculator.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
-
   <url>
-    <loc>https://tools-online.work/age.html</loc>
+    <loc>https://tools-online.work/tools/age-calculator.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
-
   <url>
-    <loc>https://tools-online.work/random.html</loc>
+    <loc>https://tools-online.work/tools/random-number.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
-
   <url>
-    <loc>https://tools-online.work/emi.html</loc>
+    <loc>https://tools-online.work/tools/emi-calculator.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
-
   <url>
-    <loc>https://tools-online.work/unit.html</loc>
+    <loc>https://tools-online.work/tools/unit.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
-
   <url>
-    <loc>https://tools-online.work/currency.html</loc>
+    <loc>https://tools-online.work/tools/currency.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
