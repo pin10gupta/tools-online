@@ -1,37 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Unit Converter - Tools Online</title>
+<meta name="description" content="Free online unit converter tool to convert length, weight, temperature and more instantly.">
+
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+<h1>🔧 Tools Online</h1>
+<nav>
+<a href="../index.html">Home</a>
+<a href="../blog.html">Blog</a>
+<a href="../contact.html">Contact</a>
+</nav>
+</header>
+
+<main>
+
+<div class="card">
 <h2>Unit Converter</h2>
-<p>Enter value and select units:</p>
-<input type="number" id="unitValue" placeholder="Value">
-<select id="fromUnit">
-  <option value="m">Meters</option>
-  <option value="kg">Kilograms</option>
-  <option value="c">Celsius</option>
-</select>
-<select id="toUnit">
-  <option value="ft">Feet</option>
-  <option value="lb">Pounds</option>
-  <option value="f">Fahrenheit</option>
-</select>
-<button onclick="convertUnit()">Convert</button>
-<p id="unitResult"></p>
+<p>Convert different units instantly using our simple tool.</p>
+</div>
 
-<script>
-function convertUnit() {
-  let val = parseFloat(document.getElementById("unitValue").value);
-  let from = document.getElementById("fromUnit").value;
-  let to = document.getElementById("toUnit").value;
-  let result = "";
+<!-- INTERACTIVE TOOL -->
 
-  if(from === "m" && to === "ft") result = (val * 3.28084).toFixed(2) + " ft";
-  else if(from === "kg" && to === "lb") result = (val * 2.20462).toFixed(2) + " lb";
-  else if(from === "c" && to === "f") result = ((val * 9/5) + 32).toFixed(2) + " °F";
-  else result = "Conversion not supported.";
+::contentReference[oaicite:0]{index=0}
 
-  document.getElementById("unitResult").innerHTML = "Result: " + result;
-}
-</script>
 
-  <!-- Footer placed correctly -->
-  <footer>© 2026 Tools Online | Created by Pintu Gupta</footer>
+<div class="card">
+<h3>About This Tool</h3>
+<p>
+The Unit Converter tool helps you convert measurements easily across different categories
+such as length, weight, temperature, and more. It is useful for students, engineers,
+and everyday users who need quick conversions.
+</p>
+
+<h3>How to Use</h3>
+<p>
+Enter a value, select the unit you want to convert from and the unit you want to convert to.
+The result will be calculated instantly.
+</p>
+
+<h3>Why Use Unit Converter?</h3>
+<p>
+Manual conversions can be confusing and time-consuming. This tool simplifies the process
+and ensures accurate results instantly.
+</p>
+
+<h3>Features</h3>
+<ul>
+<li>Instant conversion</li>
+<li>Supports multiple units</li>
+<li>Simple and clean interface</li>
+<li>Free to use</li>
+</ul>
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 Tools Online | All Rights Reserved</p>
+<p>Created by @Pintu Gupta</p>
+<p>Contact: dev.pintugupta@gmail.com</p>
+
+<p>
+<a href="../privacy.html">Privacy Policy</a> |
+<a href="../terms.html">Terms</a> |
+<a href="../disclaimer.html">Disclaimer</a>
+</p>
+</footer>
 
 </body>
 </html>
