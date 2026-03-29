@@ -1,80 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Unit Converter - Tools Online</title>
-<meta name="description" content="Free online unit converter tool to convert length, weight, temperature and more instantly.">
-
-<link rel="stylesheet" href="../css/style.css">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
 
-<header>
-<h1>🔧 Tools Online</h1>
-<nav>
-<a href="../index.html">Home</a>
-<a href="../blog.html">Blog</a>
-<a href="../contact.html">Contact</a>
-</nav>
-</header>
+<h2>Unit Converter (KM to Miles)</h2>
 
-<main>
+<input type="number" id="km" placeholder="Enter KM">
+<button onclick="convert()">Convert</button>
 
-<div class="card">
-<h2>Unit Converter</h2>
-<p>Convert different units instantly using our simple tool.</p>
-</div>
+<h3 id="result"></h3>
 
-<!-- INTERACTIVE TOOL -->
-
-::contentReference[oaicite:0]{index=0}
-
-
-<div class="card">
-<h3>About This Tool</h3>
-<p>
-The Unit Converter tool helps you convert measurements easily across different categories
-such as length, weight, temperature, and more. It is useful for students, engineers,
-and everyday users who need quick conversions.
-</p>
-
-<h3>How to Use</h3>
-<p>
-Enter a value, select the unit you want to convert from and the unit you want to convert to.
-The result will be calculated instantly.
-</p>
-
-<h3>Why Use Unit Converter?</h3>
-<p>
-Manual conversions can be confusing and time-consuming. This tool simplifies the process
-and ensures accurate results instantly.
-</p>
-
-<h3>Features</h3>
-<ul>
-<li>Instant conversion</li>
-<li>Supports multiple units</li>
-<li>Simple and clean interface</li>
-<li>Free to use</li>
-</ul>
-</div>
-
-</main>
-
-<footer>
-<p>© 2026 Tools Online | All Rights Reserved</p>
-<p>Created by @Pintu Gupta</p>
-<p>Contact: dev.pintugupta@gmail.com</p>
-
-<p>
-<a href="../privacy.html">Privacy Policy</a> |
-<a href="../terms.html">Terms</a> |
-<a href="../disclaimer.html">Disclaimer</a>
-</p>
-</footer>
+<script>
+function convert() {
+    let km = document.getElementById("km").value;
+    let miles = km * 0.621371;
+    document.getElementById("result").innerText = miles + " Miles";
+}
+</script>
 
 </body>
 </html>
