@@ -1,32 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Word Counter</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Word Counter - Tools Online">
+  <title>Word Counter | Tools Online</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: Arial, sans-serif; background:#f9f9f9; margin:0; }
+    .container { max-width:600px; margin:50px auto; background:#fff; padding:30px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align:center; margin-bottom:20px; }
+    textarea { width:100%; padding:10px; border:1px solid #ccc; border-radius:5px; resize:vertical; }
+    button { margin-top:20px; width:100%; padding:12px; background:#0078d7; color:#fff; border:none; border-radius:5px; font-size:16px; cursor:pointer; }
+    button:hover { background:#005fa3; }
+    .result { margin-top:20px; font-size:18px; text-align:center; }
+    .adsense { margin:20px 0; text-align:center; }
+  </style>
 </head>
-
 <body>
-
-<header>
-<h1>Word Counter</h1>
-<a href="../index.html">Home</a>
-</header>
-
-<main>
-<textarea id="text" rows="10" cols="40"></textarea>
-<br><br>
-<button onclick="countWords()">Count</button>
-
-<p id="result"></p>
-</main>
-
-<script>
-function countWords() {
-  let text = document.getElementById("text").value;
-  let words = text.trim().split(/\s+/).length;
-  document.getElementById("result").innerText = "Words: " + words;
-}
-</script>
-
+  <header><!-- Site header --></header>
+  <div class="container">
+    <h1>Word Counter</h1>
+    <div class="adsense"><!-- AdSense code here --></div>
+    <textarea id="text" rows="6" placeholder="Type or paste your text here..."></textarea>
+    <button onclick="countWords()">Count Words</button>
+    <div class="result" id="wordResult"></div>
+    <div class="adsense"><!-- Another AdSense block --></div>
+  </div>
+  <footer><!-- Site footer --></footer>
+  <script>
+    function countWords(){
+      let text = document.getElementById('text').value.trim();
+      let words = text.split(/\s+/).filter(Boolean).length;
+      document.getElementById('wordResult').textContent = "Word count: "+words;
+    }
+  </script>
 </body>
 </html>
