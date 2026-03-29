@@ -1,112 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Word Counter Online - Free Character & Word Count Tool</title>
-
-<meta name="description" content="Free online word counter tool to count words, characters and sentences instantly. Fast, simple and accurate tool for students and writers.">
-
-<link rel="stylesheet" href="../css/style.css">
+  <title>Word Counter</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-<h1>🔧 Tools Online</h1>
-
-<nav>
+<h1>Word Counter</h1>
 <a href="../index.html">Home</a>
-<a href="../blog.html">Blog</a>
-<a href="../contact.html">Contact</a>
-</nav>
 </header>
 
-<!-- MAIN -->
 <main>
-
-<div class="card">
-<h2>Word Counter Online</h2>
-
-<textarea id="text" rows="8" placeholder="Type or paste your text here..."></textarea>
-
+<textarea id="text" rows="10" cols="40"></textarea>
 <br><br>
 <button onclick="countWords()">Count</button>
 
 <p id="result"></p>
-</div>
-
-<!-- CONTENT (SEO + AdSense) -->
-<div class="card">
-
-<h3>About Word Counter Tool</h3>
-<p>
-The Word Counter tool helps you count the number of words, characters, and sentences in your text instantly.
-It is useful for students, writers, bloggers, and professionals who need to track content length.
-</p>
-
-<h3>How to Use</h3>
-<p>
-Simply type or paste your text into the box and click the count button.
-The tool will instantly display the number of words and characters.
-</p>
-
-<h3>Why Use This Tool?</h3>
-<ul>
-<li>Instant word and character count</li>
-<li>Helps meet writing limits</li>
-<li>Improves content quality</li>
-<li>Free and easy to use</li>
-</ul>
-
-<h3>Who Can Use It?</h3>
-<p>
-This tool is ideal for students writing assignments, bloggers creating content,
-and professionals preparing documents or reports.
-</p>
-
-</div>
-
-<!-- INTERNAL LINKS -->
-<div class="card">
-<h3>Explore More Tools</h3>
-<p>
-Try our other tools like 
-<a href="password.html">Password Generator</a>, 
-<a href="bmi.html">BMI Calculator</a>, 
-<a href="emi.html">EMI Calculator</a>, and 
-<a href="currency.html">Currency Converter</a>.
-</p>
-</div>
-
 </main>
 
-<!-- FOOTER -->
-<footer>
-<p>© 2026 Tools Online | All Rights Reserved</p>
-<p>Created by @Pintu Gupta</p>
-<p>Contact: dev.pintugupta@gmail.com</p>
-
-<p>
-<a href="../index.html">Home</a> |
-<a href="../privacy.html">Privacy Policy</a> |
-<a href="../terms.html">Terms</a> |
-<a href="../disclaimer.html">Disclaimer</a>
-</p>
-</footer>
-
-<!-- SCRIPT -->
 <script>
-function countWords(){
- let text = document.getElementById("text").value;
-
- let words = text.trim().split(/\s+/).filter(w => w.length > 0).length;
- let chars = text.length;
-
- document.getElementById("result").innerHTML =
-   "Words: " + words + " | Characters: " + chars;
+function countWords() {
+  let text = document.getElementById("text").value;
+  let words = text.trim().split(/\s+/).length;
+  document.getElementById("result").innerText = "Words: " + words;
 }
 </script>
 
