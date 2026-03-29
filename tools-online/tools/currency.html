@@ -1,110 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Currency Converter - Tools Online </title>
-<meta name="description" content="Free online currency converter to convert USD, INR, EUR and more instantly.">
-
-<link rel="stylesheet" href="../css/style.css">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
 
-<header>
-<h1>🔧 Tools Online</h1>
-<nav>
-<a href="../index.html">Home</a>
-<a href="../blog.html">Blog</a>
-<a href="../contact.html">Contact</a>
-</nav>
-</header>
+<h2>Currency Converter (INR to USD)</h2>
 
-<main>
+<input type="number" id="inr" placeholder="Enter INR">
+<button onclick="convertCurrency()">Convert</button>
 
-<div class="card">
-<h2>Currency Converter</h2>
-
-<input id="amount" placeholder="Enter amount"><br><br>
-
-<select id="from">
-<option value="USD">USD</option>
-<option value="INR">INR</option>
-<option value="EUR">EUR</option>
-</select>
-
-<select id="to">
-<option value="INR">INR</option>
-<option value="USD">USD</option>
-<option value="EUR">EUR</option>
-</select>
-
-<br><br>
-<button onclick="convert()">Convert</button>
-
-<p id="result"></p>
-</div>
-
-<div class="card">
-<h3>About This Tool</h3>
-<p>
-The Currency Converter tool allows you to convert values between different currencies
-such as USD, INR, and EUR. It is useful for travelers, online shoppers, and businesses.
-</p>
-
-<h3>How to Use</h3>
-<p>
-Enter the amount, select currencies, and click convert to see the result instantly.
-</p>
-
-<h3>Why Use Currency Converter?</h3>
-<p>
-Exchange rates change frequently, so using an online tool ensures quick and easy
-conversion without manual calculations.
-</p>
-
-<h3>Features</h3>
-<ul>
-<li>Simple interface</li>
-<li>Fast calculation</li>
-<li>Multiple currencies</li>
-<li>Free tool</li>
-</ul>
-</div>
-
-</main>
-
-<footer>
-<p>© 2026 Tools Online | All Rights Reserved</p>
-<p>Created by @Pintu Gupta</p>
-<p>Contact: dev.pintugupta@gmail.com</p>
-
-<p>
-<a href="../privacy.html">Privacy Policy</a> |
-<a href="../terms.html">Terms</a> |
-<a href="../disclaimer.html">Disclaimer</a>
-</p>
-</footer>
+<h3 id="result"></h3>
 
 <script>
-function convert(){
-  let amount = document.getElementById("amount").value;
-  let from = document.getElementById("from").value;
-  let to = document.getElementById("to").value;
-
-  // Simple demo rates (you can upgrade later)
-  let rate = 1;
-
-  if(from=="USD" && to=="INR") rate = 83;
-  if(from=="INR" && to=="USD") rate = 0.012;
-  if(from=="EUR" && to=="INR") rate = 90;
-  if(from=="INR" && to=="EUR") rate = 0.011;
-
-  let result = amount * rate;
-
-  document.getElementById("result").innerText =
-    "Converted Amount: " + result.toFixed(2);
+function convertCurrency() {
+    let inr = document.getElementById("inr").value;
+    let usd = inr / 83; // approx rate
+    document.getElementById("result").innerText = "$ " + usd.toFixed(2);
 }
 </script>
 
