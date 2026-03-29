@@ -2,30 +2,30 @@
 <html>
 <head>
 <title>BMI Calculator</title>
-<meta name="description" content="Calculate BMI easily.">
 <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
 
-<header><h1>🔧 Tools Online</h1></header>
+<header>
+<h1>BMI Calculator</h1>
+<a href="../index.html">Home</a>
+</header>
 
 <main>
-<div class="card">
-<h2>BMI Calculator</h2>
-<input id="w" placeholder="Weight"><br><br>
-<input id="h" placeholder="Height"><br><br>
+<input id="weight" placeholder="Weight kg"><br><br>
+<input id="height" placeholder="Height m"><br><br>
+
 <button onclick="calc()">Calculate</button>
 <p id="res"></p>
-</div>
 </main>
-
-<footer><p>© 2026 | @Pintu Gupta</p></footer>
 
 <script>
 function calc(){
- let w=document.getElementById("w").value;
- let h=document.getElementById("h").value;
- document.getElementById("res").innerText="BMI: "+(w/(h*h)).toFixed(2);
+ let w = document.getElementById("weight").value;
+ let h = document.getElementById("height").value;
+ let bmi = w/(h*h);
+ document.getElementById("res").innerText = "BMI: " + bmi.toFixed(2);
 }
 </script>
 
