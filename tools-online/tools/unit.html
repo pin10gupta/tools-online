@@ -1,25 +1,19 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Unit Converter</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Unit Converter | Tools Online</title><link rel="stylesheet" href="css/style.css"></head>
 <body>
-
-<h2>Unit Converter (KM to Miles)</h2>
-
-<input type="number" id="km" placeholder="Enter KM">
-<button onclick="convert()">Convert</button>
-
-<h3 id="result"></h3>
-
+<div class="container">
+  <h1>Unit Converter (km ↔ miles)</h1>
+  <input type="number" id="km" placeholder="Kilometers">
+  <button onclick="toMiles()">Convert to Miles</button>
+  <div class="result" id="unitResult"></div>
+</div>
 <script>
-function convert() {
-    let km = document.getElementById("km").value;
-    let miles = km * 0.621371;
-    document.getElementById("result").innerText = miles + " Miles";
+function toMiles(){
+  let km = parseFloat(document.getElementById('km').value);
+  let miles = km*0.621371;
+  document.getElementById('unitResult').textContent = km+" km = "+miles.toFixed(2)+" miles";
 }
 </script>
-
 </body>
 </html>
