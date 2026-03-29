@@ -1,31 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Age Calculator</title>
-<link rel="stylesheet" href="../css/style.css">
-</head>
-
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Age Calculator | Tools Online</title><link rel="stylesheet" href="css/style.css"></head>
 <body>
-
-<header>
-<h1>Age Calculator</h1>
-<a href="../index.html">Home</a>
-</header>
-
-<main>
-<input type="date" id="dob"><br><br>
-<button onclick="calcAge()">Calculate</button>
-<p id="age"></p>
-</main>
-
+<div class="container">
+  <h1>Age Calculator</h1>
+  <div class="adsense"></div>
+  <label for="dob">Enter Date of Birth</label>
+  <input type="date" id="dob">
+  <button onclick="calcAge()">Calculate Age</button>
+  <div class="result" id="ageResult"></div>
+  <div class="adsense"></div>
+</div>
 <script>
 function calcAge(){
- let dob = new Date(document.getElementById("dob").value);
- let today = new Date();
- let age = today.getFullYear() - dob.getFullYear();
- document.getElementById("age").innerText = "Age: " + age;
+  let dob = new Date(document.getElementById('dob').value);
+  let diff = Date.now() - dob.getTime();
+  let age = new Date(diff).getUTCFullYear() - 1970;
+  document.getElementById('ageResult').textContent = "Your age is " + age + " years.";
 }
 </script>
-
 </body>
 </html>
