@@ -1,30 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Unit Converter - Tools Online">
-  <title>Unit Converter | Tools Online</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>/* same container/card styles */</style>
+  <title>Unit Converter</title>
+  <meta name="description" content="Convert units like kilometers to miles easily.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>/* same styling as BMI */</style>
 </head>
 <body>
-  <header></header>
-  <div class="container">
-    <h1>Unit Converter (km ↔ miles)</h1>
-    <div class="adsense"></div>
+
+<header><h1>Unit Converter</h1></header>
+
+<main>
+  <div class="card">
+    <p>Convert kilometers to miles.</p>
     <input type="number" id="km" placeholder="Kilometers">
-    <button onclick="toMiles()">Convert to Miles</button>
+    <button onclick="convertKm()">Convert</button>
     <div class="result" id="unitResult"></div>
-    <div class="adsense"></div>
   </div>
-  <footer></footer>
-  <script>
-    function toMiles(){
-      let km = parseFloat(document.getElementById('km').value);
-      let miles = km*0.621371;
-      document.getElementById('unitResult').textContent = km+" km = "+miles.toFixed(2)+" miles";
-    }
-  </script>
+</main>
+
+<script>
+function convertKm() {
+  const km = document.getElementById('km').value;
+  if(km) {
+    const miles = (km * 0.621371).toFixed(2);
+    document.getElementById('unitResult').innerText = km + " km = " + miles + " miles";
+  }
+}
+</script>
+
 </body>
 </html>
