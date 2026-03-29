@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Currency Converter | Tools Online</title><link rel="stylesheet" href="css/style.css"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Currency Converter - Tools Online">
+  <title>Currency Converter | Tools Online</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>/* same container/card styles */</style>
+</head>
 <body>
-<div class="container">
-  <h1>Currency Converter (USD ↔ INR)</h1>
-  <input type="number" id="usd" placeholder="USD">
-  <button onclick="toINR()">Convert to INR</button>
-  <div class="result" id="currResult"></div>
-</div>
-<script>
-function toINR(){
-  let usd = parseFloat(document.getElementById('usd').value);
-  let inr = usd*83; // static rate, replace with API for live
-  document.getElementById('currResult').textContent = usd+" USD = ₹"+inr.toFixed(2);
-}
-</script>
+  <header></header>
+  <div class="container">
+    <h1>Currency Converter (USD ↔ INR)</h1>
+    <div class="adsense"></div>
+    <input type="number" id="usd" placeholder="USD">
+    <button onclick="toINR()">Convert to INR</button>
+    <div class="result" id="currResult"></div>
+    <div class="adsense"></div>
+  </div>
+  <footer></footer>
+  <script>
+    function toINR(){
+      let usd = parseFloat(document.getElementById('usd').value);
+      let inr = usd*83; // static rate, replace with API for live
+      document.getElementById('currResult').textContent = usd+" USD = ₹"+inr.toFixed(2);
+    }
+  </script>
 </body>
 </html>
