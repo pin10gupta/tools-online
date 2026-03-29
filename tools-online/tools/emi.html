@@ -1,59 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>EMI Calculator</title>
-<meta name="description" content="Calculate your loan EMI easily using our free EMI calculator.">
+<title>Age Calculator</title>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
 <header>
-<h1>🔧 Tools Online</h1>
+<h1>Age Calculator</h1>
+<a href="../index.html">Home</a>
 </header>
 
 <main>
-
-<div class="card">
-<h2>EMI Calculator</h2>
-
-<input id="p" placeholder="Loan Amount"><br><br>
-<input id="r" placeholder="Interest Rate (%)"><br><br>
-<input id="t" placeholder="Time (months)"><br><br>
-
-<button onclick="calcEMI()">Calculate</button>
-<p id="emi"></p>
-</div>
-
-<div class="card">
-<h3>About EMI</h3>
-<p>
-EMI (Equated Monthly Installment) is the fixed amount you pay every month
-to repay your loan.
-</p>
-
-<h3>How to Use</h3>
-<p>
-Enter loan amount, interest rate, and duration to calculate EMI instantly.
-</p>
-</div>
-
+<input type="date" id="dob"><br><br>
+<button onclick="calcAge()">Calculate</button>
+<p id="age"></p>
 </main>
 
-<footer>
-<p>© 2026 Tools Online | @Pintu Gupta</p>
-<p>Contact: dev.pintugupta@gmail.com</p>
-</footer>
-
 <script>
-function calcEMI(){
- let p=document.getElementById("p").value;
- let r=document.getElementById("r").value/12/100;
- let t=document.getElementById("t").value;
-
- let emi=(p*r*Math.pow(1+r,t))/(Math.pow(1+r,t)-1);
-
- document.getElementById("emi").innerText="EMI: "+emi.toFixed(2);
+function calcAge(){
+ let dob = new Date(document.getElementById("dob").value);
+ let today = new Date();
+ let age = today.getFullYear() - dob.getFullYear();
+ document.getElementById("age").innerText = "Age: " + age;
 }
 </script>
 
