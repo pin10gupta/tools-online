@@ -1,36 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>BMI Calculator - Tools Online</title>
+<title>BMI Calculator</title>
+<meta name="description" content="Calculate your Body Mass Index (BMI) easily using our free tool.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-  <h1>BMI Calculator</h1>
-  <p>Check your Body Mass Index instantly.</p>
 
-  <label>Weight (kg): <input type="number" id="weight"></label><br>
-  <label>Height (cm): <input type="number" id="height"></label><br>
-  <button onclick="calculateBMI()">Calculate</button>
+<header>
+<h1>🔧 Tools Online</h1>
+</header>
 
-  <p id="bmiResult"></p>
+<main>
 
-  <script>
-    function calculateBMI() {
-      let weight = document.getElementById("weight").value;
-      let height = document.getElementById("height").value / 100;
-      let bmi = (weight / (height * height)).toFixed(2);
-      let category = "";
-      if (bmi < 18.5) category = "Underweight";
-      else if (bmi < 25) category = "Normal weight";
-      else if (bmi < 30) category = "Overweight";
-      else category = "Obese";
-      document.getElementById("bmiResult").innerText =
-        "Your BMI: " + bmi + " (" + category + ")";
-    }
-  </script>
+<div class="card">
+<h2>BMI Calculator</h2>
 
-  <!-- Footer placed correctly -->
-  <footer>© 2026 Tools Online | Created by Pintu Gupta</footer>
+<input id="w" placeholder="Weight (kg)"><br><br>
+<input id="h" placeholder="Height (m)"><br><br>
+
+<button onclick="calc()">Calculate</button>
+<p id="res"></p>
+</div>
+
+<div class="card">
+<h3>About BMI</h3>
+<p>
+BMI (Body Mass Index) helps you determine whether your body weight is healthy
+based on your height.
+</p>
+
+<h3>How to Use</h3>
+<p>
+Enter your weight and height, then click calculate to get your BMI result instantly.
+</p>
+
+<h3>Features</h3>
+<ul>
+<li>Quick calculation</li>
+<li>Accurate result</li>
+<li>Simple interface</li>
+<li>Free tool</li>
+</ul>
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 Tools Online | @Pintu Gupta</p>
+<p>Contact: dev.pintugupta@gmail.com</p>
+</footer>
+
+<script>
+function calc(){
+ let w=document.getElementById("w").value;
+ let h=document.getElementById("h").value;
+ let bmi=w/(h*h);
+ document.getElementById("res").innerText="BMI: "+bmi.toFixed(2);
+}
+</script>
 
 </body>
 </html>
