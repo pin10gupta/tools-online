@@ -1,42 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Age Calculator - Tools Online</title>
+<title>Age Calculator</title>
+<meta name="description" content="Calculate your age instantly using our free age calculator.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-  <h1>Age Calculator</h1>
-  <p>Find your exact age in years, months, and days.</p>
 
-  <label>Date of Birth: <input type="date" id="dob"></label>
-  <button onclick="calculateAge()">Calculate</button>
+<header>
+<h1>🔧 Tools Online</h1>
+</header>
 
-  <p id="ageResult"></p>
+<main>
 
-  <script>
-    function calculateAge() {
-      let dob = new Date(document.getElementById("dob").value);
-      let today = new Date();
-      let years = today.getFullYear() - dob.getFullYear();
-      let months = today.getMonth() - dob.getMonth();
-      let days = today.getDate() - dob.getDate();
+<div class="card">
+<h2>Age Calculator</h2>
 
-      if (days < 0) {
-        months--;
-        days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
-      }
-      if (months < 0) {
-        years--;
-        months += 12;
-      }
+<input type="date" id="dob"><br><br>
+<button onclick="age()">Calculate</button>
+<p id="out"></p>
+</div>
 
-      document.getElementById("ageResult").innerText =
-        "You are " + years + " years, " + months + " months, and " + days + " days old.";
-    }
-  </script>
+<div class="card">
+<h3>About This Tool</h3>
+<p>
+This tool calculates your exact age based on your date of birth.
+</p>
 
-  <!-- Footer placed correctly -->
-  <footer>© 2026 Tools Online | Created by Pintu Gupta</footer>
+<h3>How to Use</h3>
+<p>
+Select your birth date and click calculate to get your age instantly.
+</p>
+
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 Tools Online | @Pintu Gupta</p>
+<p>Contact: dev.pintugupta@gmail.com</p>
+</footer>
+
+<script>
+function age(){
+ let dob=new Date(document.getElementById("dob").value);
+ let today=new Date();
+ let age=today.getFullYear()-dob.getFullYear();
+ document.getElementById("out").innerText="Age: "+age;
+}
+</script>
 
 </body>
 </html>
