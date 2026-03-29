@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Age Calculator</title>
-<link rel="stylesheet" href="../css/style.css">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
 
-<header>
-<h1>Age Calculator</h1>
-<a href="../index.html">Home</a>
-</header>
+<h2>EMI Calculator</h2>
 
-<main>
-<input type="date" id="dob"><br><br>
-<button onclick="calcAge()">Calculate</button>
-<p id="age"></p>
-</main>
+<label>Loan Amount:</label>
+<input type="number" id="amount"><br><br>
+
+<label>Interest Rate (%):</label>
+<input type="number" id="rate"><br><br>
+
+<label>Time (Years):</label>
+<input type="number" id="time"><br><br>
+
+<button onclick="calculateEMI()">Calculate</button>
+
+<h3 id="result"></h3>
 
 <script>
-function calcAge(){
- let dob = new Date(document.getElementById("dob").value);
- let today = new Date();
- let age = today.getFullYear() - dob.getFullYear();
- document.getElementById("age").innerText = "Age: " + age;
+function calculateEMI() {
+    let P = document.getElementById("amount").value;
+    let r = document.getElementById("rate").value / 12 / 100;
+    let n = document.getElementById("time").value * 12;
+
+    let emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+    document.getElementById("result").innerText = "EMI: ₹ " + emi.toFixed(2);
 }
 </script>
 
