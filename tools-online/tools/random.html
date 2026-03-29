@@ -1,43 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Random Number Generator</title>
-<meta name="description" content="Generate random numbers instantly using our free tool.">
+<title>Random Number</title>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
 <header>
-<h1>🔧 Smart Tools Hub Online</h1>
+<h1>Random Number Generator</h1>
+<a href="../index.html">Home</a>
 </header>
 
 <main>
-
-<div class="card">
-<h2>Random Number Generator</h2>
 <button onclick="gen()">Generate</button>
 <p id="num"></p>
-</div>
-
-<div class="card">
-<h3>About This Tool</h3>
-<p>
-This tool generates random numbers instantly for various purposes like games,
-testing, or selection.
-</p>
-</div>
-
 </main>
-
-<footer>
-<p>© 2026 Tools Online | @Pintu Gupta</p>
-<p>Contact: dev.pintugupta@gmail.com</p>
-</footer>
 
 <script>
 function gen(){
- document.getElementById("num").innerText=Math.floor(Math.random()*100);
+ document.getElementById("num").innerText = Math.floor(Math.random()*100);
 }
 </script>
 
