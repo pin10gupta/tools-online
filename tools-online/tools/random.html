@@ -1,31 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Random Number Generator - Tools Online</title>
+<title>Random Number Generator</title>
+<meta name="description" content="Generate random numbers instantly using our free tool.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-  <h1>Random Number Generator</h1>
-  <p>Generate unbiased random numbers.</p>
 
-  <label>Min: <input type="number" id="min" value="1"></label>
-  <label>Max: <input type="number" id="max" value="100"></label>
-  <button onclick="generateRandom()">Generate</button>
+<header>
+<h1>🔧 Smart Tools Hub Online</h1>
+</header>
 
-  <p id="randomResult"></p>
+<main>
 
-  <script>
-    function generateRandom() {
-      let min = parseInt(document.getElementById("min").value);
-      let max = parseInt(document.getElementById("max").value);
-      let random = Math.floor(Math.random() * (max - min + 1)) + min;
-      document.getElementById("randomResult").innerText =
-        "Random Number: " + random;
-    }
-  </script>
+<div class="card">
+<h2>Random Number Generator</h2>
+<button onclick="gen()">Generate</button>
+<p id="num"></p>
+</div>
 
-  <!-- Footer placed correctly -->
-  <footer>© 2026 Tools Online | Created by Pintu Gupta</footer>
+<div class="card">
+<h3>About This Tool</h3>
+<p>
+This tool generates random numbers instantly for various purposes like games,
+testing, or selection.
+</p>
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 Tools Online | @Pintu Gupta</p>
+<p>Contact: dev.pintugupta@gmail.com</p>
+</footer>
+
+<script>
+function gen(){
+ document.getElementById("num").innerText=Math.floor(Math.random()*100);
+}
+</script>
 
 </body>
 </html>
