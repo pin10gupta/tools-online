@@ -2,62 +2,30 @@
 <html>
 <head>
 <title>BMI Calculator</title>
-<meta name="description" content="Calculate your Body Mass Index (BMI) easily using our free tool.">
+<meta name="description" content="Calculate BMI easily.">
 <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
 
-<header>
-<h1>🔧 Tools Online</h1>
-</header>
+<header><h1>🔧 Tools Online</h1></header>
 
 <main>
-
 <div class="card">
 <h2>BMI Calculator</h2>
-
-<input id="w" placeholder="Weight (kg)"><br><br>
-<input id="h" placeholder="Height (m)"><br><br>
-
+<input id="w" placeholder="Weight"><br><br>
+<input id="h" placeholder="Height"><br><br>
 <button onclick="calc()">Calculate</button>
 <p id="res"></p>
 </div>
-
-<div class="card">
-<h3>About BMI</h3>
-<p>
-BMI (Body Mass Index) helps you determine whether your body weight is healthy
-based on your height.
-</p>
-
-<h3>How to Use</h3>
-<p>
-Enter your weight and height, then click calculate to get your BMI result instantly.
-</p>
-
-<h3>Features</h3>
-<ul>
-<li>Quick calculation</li>
-<li>Accurate result</li>
-<li>Simple interface</li>
-<li>Free tool</li>
-</ul>
-</div>
-
 </main>
 
-<footer>
-<p>© 2026 Tools Online | @Pintu Gupta</p>
-<p>Contact: dev.pintugupta@gmail.com</p>
-</footer>
+<footer><p>© 2026 | @Pintu Gupta</p></footer>
 
 <script>
 function calc(){
  let w=document.getElementById("w").value;
  let h=document.getElementById("h").value;
- let bmi=w/(h*h);
- document.getElementById("res").innerText="BMI: "+bmi.toFixed(2);
+ document.getElementById("res").innerText="BMI: "+(w/(h*h)).toFixed(2);
 }
 </script>
 
