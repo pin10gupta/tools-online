@@ -1,36 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>EMI Calculator</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EMI Calculator - Tools Online">
+  <title>EMI Calculator | Tools Online</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: Arial, sans-serif; background:#f9f9f9; margin:0; }
+    .container { max-width:600px; margin:50px auto; background:#fff; padding:30px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align:center; margin-bottom:20px; }
+    label { display:block; margin:10px 0 5px; font-weight:bold; }
+    input { width:100%; padding:10px; border:1px solid #ccc; border-radius:5px; }
+    button { margin-top:20px; width:100%; padding:12px; background:#0078d7; color:#fff; border:none; border-radius:5px; font-size:16px; cursor:pointer; }
+    button:hover { background:#005fa3; }
+    .result { margin-top:20px; font-size:18px; text-align:center; }
+    .adsense { margin:20px 0; text-align:center; }
+  </style>
 </head>
 <body>
-
-<h2>EMI Calculator</h2>
-
-<label>Loan Amount:</label>
-<input type="number" id="amount"><br><br>
-
-<label>Interest Rate (%):</label>
-<input type="number" id="rate"><br><br>
-
-<label>Time (Years):</label>
-<input type="number" id="time"><br><br>
-
-<button onclick="calculateEMI()">Calculate</button>
-
-<h3 id="result"></h3>
-
-<script>
-function calculateEMI() {
-    let P = document.getElementById("amount").value;
-    let r = document.getElementById("rate").value / 12 / 100;
-    let n = document.getElementById("time").value * 12;
-
-    let emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-    document.getElementById("result").innerText = "EMI: ₹ " + emi.toFixed(2);
-}
-</script>
-
+  <header><!-- Site header --></header>
+  <div class="container">
+    <h1>EMI Calculator</h1>
+    <div class="adsense"><!-- AdSense code here --></div>
+    <form id="emiForm">
+      <label for="loan">Loan Amount</label>
+      <input type="number" id="loan" required>
+      <label for="rate">Interest Rate (%)</label>
+      <input type="number" id="rate" step="0.01" required>
+      <label for="time">Tenure (months)</label>
+      <input type="number" id="time" required>
+      <button type="submit">Calculate EMI</button>
+    </form>
+    <div class="result" id="emiResult"></div>
+    <div class="adsense"><!-- Another AdSense block --></div>
+  </div>
+  <footer><!-- Site footer --></footer>
+  <script>
+    document.getElementById('emiForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      let P = parseFloat(document.getElementById('loan').value);
+      let R = parseFloat(document.getElementById('rate').value) / 12 / 100;
+      let N = parseInt(document.getElementById('time').value);
+      let emi = (P * R * Math.pow(1+R, N)) / (Math.pow(1+R, N) - 1);
+      document.getElementById('emiResult').textContent = "Your EMI is ₹" + emi.toFixed(2);
+    });
+  </script>
 </body>
 </html>
