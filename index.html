@@ -3,19 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Tools Online - Free Online Tools</title>
   <meta name="description" content="Free online tools like Word Counter, Password Generator, BMI Calculator, Age Calculator, EMI Calculator and more. Fast, simple and secure tools.">
-
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background:#f9f9f9; }
+    header, footer { background:#0078d7; color:#fff; padding:15px; text-align:center; }
+    header h1 { margin:0; }
+    nav a { color:#fff; margin:0 10px; text-decoration:none; }
+    nav a:hover { text-decoration:underline; }
+    main { padding:20px; }
+    .card { background:#fff; padding:20px; margin:20px auto; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); max-width:900px; }
+    .tools h2 { text-align:center; margin-bottom:30px; }
+    .tool-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; }
+    .tool-card { background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:center; }
+    .tool-card h3 { margin-bottom:10px; }
+    .tool-card p { font-size:14px; color:#555; }
+    .tool-card .btn { display:inline-block; margin-top:15px; padding:10px 20px; background:#0078d7; color:#fff; text-decoration:none; border-radius:5px; }
+    .tool-card .btn:hover { background:#005fa3; }
+    footer p { margin:5px 0; }
+    footer a { color:#fff; margin:0 5px; text-decoration:none; }
+    footer a:hover { text-decoration:underline; }
+  </style>
 </head>
-
 <body>
 
 <!-- HEADER -->
 <header>
   <h1>🔧 Tools Online</h1>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -38,31 +53,62 @@
     </p>
   </div>
 
-  <!-- TOOLS -->
-  <div class="card">
+  <!-- TOOLS HUB -->
+  <div class="card tools">
     <h2>Available Tools</h2>
-
-    <ul>
-      <li><a href="tools/wordcounter.html">Word Counter</a> – Count words and characters instantly.</li>
-      <li><a href="tools/password.html">Password Generator</a> – Generate secure passwords.</li>
-      <li><a href="tools/bmi.html">BMI Calculator</a> – Check your body mass index.</li>
-      <li><a href="tools/age.html">Age Calculator</a> – Calculate your exact age.</li>
-      <li><a href="tools/random.html">Random Number Generator</a> – Generate random numbers.</li>
-      <li><a href="tools/emi.html">EMI Calculator</a> – Calculate your monthly loan EMI.</li>
-      <li><a href="tools/unit.html">EMI Calculator</a> – Calculate your monthly loan EMI.</li>
-      <li><a href="tools/currency.html">EMI Calculator</a> – Calculate your monthly loan EMI.</li>
-    </ul>
+    <div class="tool-grid">
+      <div class="tool-card">
+        <h3>Word Counter</h3>
+        <p>Count words and characters instantly.</p>
+        <a href="word-counter.html" class="btn">Open Tool</a>
+      </div>
+      <div class="tool-card">
+        <h3>Password Generator</h3>
+        <p>Create strong, secure passwords easily.</p>
+        <a href="password.html" class="btn">Open Tool</a>
+      </div>
+      <div class="tool-card">
+        <h3>BMI Calculator</h3>
+        <p>Check your Body Mass Index quickly.</p>
+        <a href="bmi.html" class="btn">Open Tool</a>
+      </div>
+      <div class="tool-card">
+        <h3>Age Calculator</h3>
+        <p>Find your exact age in years.</p>
+        <a href="age.html" class="btn">Open Tool</a>
+      </div>
+      <div class="tool-card">
+        <h3>Random Number Generator</h3>
+        <p>Generate random numbers between ranges.</p>
+        <a href="random.html" class="btn">Open Tool</a>
+      </div>
+      <div class="tool-card">
+        <h3>EMI Calculator</h3>
+        <p>Calculate monthly loan installments.</p>
+        <a href="emi.html" class="btn">Open Tool</a>
+      </div>
+      <div class="tool-card">
+        <h3>Unit Converter</h3>
+        <p>Convert kilometers to miles and more.</p>
+        <a href="unit.html" class="btn">Open Tool</a>
+      </div>
+      <div class="tool-card">
+        <h3>Currency Converter</h3>
+        <p>Convert USD to INR instantly.</p>
+        <a href="currency.html" class="btn">Open Tool</a>
+      </div>
+    </div>
   </div>
 
   <!-- WHY US -->
   <div class="card">
     <h2>Why Choose Our Tools?</h2>
     <p>
-      ✔ 100% Free  
-      ✔ No Signup Required  
-      ✔ Fast & Accurate Results  
-      ✔ Mobile Friendly  
-      ✔ Secure & Easy to Use  
+      ✔ 100% Free<br>
+      ✔ No Signup Required<br>
+      ✔ Fast & Accurate Results<br>
+      ✔ Mobile Friendly<br>
+      ✔ Secure & Easy to Use
     </p>
   </div>
 
@@ -82,7 +128,6 @@
   <p>© 2026 Tools Online | All Rights Reserved</p>
   <p>Created by @Pintu Gupta</p>
   <p>Contact: dev.pintugupta@gmail.com</p>
-
   <p>
     <a href="index.html">Home</a> |
     <a href="about.html">About</a> |
