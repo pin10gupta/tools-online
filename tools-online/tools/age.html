@@ -2,52 +2,28 @@
 <html>
 <head>
 <title>Age Calculator</title>
-<meta name="description" content="Calculate your age instantly using our free age calculator.">
 <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
 <header>
-<h1>🔧 Tools Online</h1>
+<h1>Age Calculator</h1>
+<a href="../index.html">Home</a>
 </header>
 
 <main>
-
-<div class="card">
-<h2>Age Calculator</h2>
-
 <input type="date" id="dob"><br><br>
-<button onclick="age()">Calculate</button>
-<p id="out"></p>
-</div>
-
-<div class="card">
-<h3>About This Tool</h3>
-<p>
-This tool calculates your exact age based on your date of birth.
-</p>
-
-<h3>How to Use</h3>
-<p>
-Select your birth date and click calculate to get your age instantly.
-</p>
-
-</div>
-
+<button onclick="calcAge()">Calculate</button>
+<p id="age"></p>
 </main>
 
-<footer>
-<p>© 2026 Tools Online | @Pintu Gupta</p>
-<p>Contact: dev.pintugupta@gmail.com</p>
-</footer>
-
 <script>
-function age(){
- let dob=new Date(document.getElementById("dob").value);
- let today=new Date();
- let age=today.getFullYear()-dob.getFullYear();
- document.getElementById("out").innerText="Age: "+age;
+function calcAge(){
+ let dob = new Date(document.getElementById("dob").value);
+ let today = new Date();
+ let age = today.getFullYear() - dob.getFullYear();
+ document.getElementById("age").innerText = "Age: " + age;
 }
 </script>
 
