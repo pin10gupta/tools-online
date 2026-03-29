@@ -1,34 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>EMI Calculator - Tools Online</title>
+<title>EMI Calculator</title>
+<meta name="description" content="Calculate your loan EMI easily using our free EMI calculator.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-  <h1>EMI Calculator</h1>
-  <p>Plan your loan repayments easily.</p>
 
-  <label>Loan Amount (₹): <input type="number" id="loan"></label><br>
-  <label>Annual Interest Rate (%): <input type="number" id="rate"></label><br>
-  <label>Tenure (months): <input type="number" id="months"></label><br>
-  <button onclick="calculateEMI()">Calculate</button>
+<header>
+<h1>🔧 Tools Online</h1>
+</header>
 
-  <p id="emiResult"></p>
+<main>
 
-  <script>
-    function calculateEMI() {
-      let loan = document.getElementById("loan").value;
-      let rate = document.getElementById("rate").value / 12 / 100;
-      let months = document.getElementById("months").value;
-      let emi = (loan * rate * Math.pow(1 + rate, months)) /
-                (Math.pow(1 + rate, months) - 1);
-      document.getElementById("emiResult").innerText =
-        "Your EMI: ₹" + emi.toFixed(2);
-    }
-  </script>
+<div class="card">
+<h2>EMI Calculator</h2>
 
-  <!-- Footer placed correctly -->
-  <footer>© 2026 Tools Online | Created by Pintu Gupta</footer>
+<input id="p" placeholder="Loan Amount"><br><br>
+<input id="r" placeholder="Interest Rate (%)"><br><br>
+<input id="t" placeholder="Time (months)"><br><br>
+
+<button onclick="calcEMI()">Calculate</button>
+<p id="emi"></p>
+</div>
+
+<div class="card">
+<h3>About EMI</h3>
+<p>
+EMI (Equated Monthly Installment) is the fixed amount you pay every month
+to repay your loan.
+</p>
+
+<h3>How to Use</h3>
+<p>
+Enter loan amount, interest rate, and duration to calculate EMI instantly.
+</p>
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 Tools Online | @Pintu Gupta</p>
+<p>Contact: dev.pintugupta@gmail.com</p>
+</footer>
+
+<script>
+function calcEMI(){
+ let p=document.getElementById("p").value;
+ let r=document.getElementById("r").value/12/100;
+ let t=document.getElementById("t").value;
+
+ let emi=(p*r*Math.pow(1+r,t))/(Math.pow(1+r,t)-1);
+
+ document.getElementById("emi").innerText="EMI: "+emi.toFixed(2);
+}
+</script>
 
 </body>
 </html>
