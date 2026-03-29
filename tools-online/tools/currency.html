@@ -1,25 +1,19 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Currency Converter</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Currency Converter | Tools Online</title><link rel="stylesheet" href="css/style.css"></head>
 <body>
-
-<h2>Currency Converter (INR to USD)</h2>
-
-<input type="number" id="inr" placeholder="Enter INR">
-<button onclick="convertCurrency()">Convert</button>
-
-<h3 id="result"></h3>
-
+<div class="container">
+  <h1>Currency Converter (USD ↔ INR)</h1>
+  <input type="number" id="usd" placeholder="USD">
+  <button onclick="toINR()">Convert to INR</button>
+  <div class="result" id="currResult"></div>
+</div>
 <script>
-function convertCurrency() {
-    let inr = document.getElementById("inr").value;
-    let usd = inr / 83; // approx rate
-    document.getElementById("result").innerText = "$ " + usd.toFixed(2);
+function toINR(){
+  let usd = parseFloat(document.getElementById('usd').value);
+  let inr = usd*83; // static rate, replace with API for live
+  document.getElementById('currResult').textContent = usd+" USD = ₹"+inr.toFixed(2);
 }
 </script>
-
 </body>
 </html>
