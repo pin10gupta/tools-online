@@ -1,30 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Currency Converter - Tools Online">
-  <title>Currency Converter | Tools Online</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>/* same container/card styles */</style>
+  <title>Currency Converter</title>
+  <meta name="description" content="Convert USD to INR instantly.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>/* same styling as BMI */</style>
 </head>
 <body>
-  <header></header>
-  <div class="container">
-    <h1>Currency Converter (USD ↔ INR)</h1>
-    <div class="adsense"></div>
+
+<header><h1>Currency Converter</h1></header>
+
+<main>
+  <div class="card">
+    <p>Convert USD to INR.</p>
     <input type="number" id="usd" placeholder="USD">
-    <button onclick="toINR()">Convert to INR</button>
-    <div class="result" id="currResult"></div>
-    <div class="adsense"></div>
+    <button onclick="convertCurrency()">Convert</button>
+    <div class="result" id="currencyResult"></div>
   </div>
-  <footer></footer>
-  <script>
-    function toINR(){
-      let usd = parseFloat(document.getElementById('usd').value);
-      let inr = usd*83; // static rate, replace with API for live
-      document.getElementById('currResult').textContent = usd+" USD = ₹"+inr.toFixed(2);
-    }
-  </script>
+</main>
+
+<script>
+function convertCurrency() {
+  const usd = document.getElementById('usd').value;
+  const rate = 83; // Example static rate, replace with live API if needed
+  if(usd) {
+    const inr = (usd * rate).toFixed(2);
+    document.getElementById('currencyResult').innerText = usd + " USD = ₹" + inr + " INR";
+  }
+}
+</script>
+
 </body>
 </html>
