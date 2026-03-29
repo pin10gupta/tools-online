@@ -1,33 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>BMI Calculator</title>
-<link rel="stylesheet" href="../css/style.css">
-</head>
-
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>BMI Calculator | Tools Online</title><link rel="stylesheet" href="css/style.css"></head>
 <body>
-
-<header>
-<h1>BMI Calculator</h1>
-<a href="../index.html">Home</a>
-</header>
-
-<main>
-<input id="weight" placeholder="Weight kg"><br><br>
-<input id="height" placeholder="Height m"><br><br>
-
-<button onclick="calc()">Calculate</button>
-<p id="res"></p>
-</main>
-
+<div class="container">
+  <h1>BMI Calculator</h1>
+  <label>Weight (kg)</label><input type="number" id="weight">
+  <label>Height (cm)</label><input type="number" id="height">
+  <button onclick="calcBMI()">Calculate BMI</button>
+  <div class="result" id="bmiResult"></div>
+</div>
 <script>
-function calc(){
- let w = document.getElementById("weight").value;
- let h = document.getElementById("height").value;
- let bmi = w/(h*h);
- document.getElementById("res").innerText = "BMI: " + bmi.toFixed(2);
+function calcBMI(){
+  let w = parseFloat(document.getElementById('weight').value);
+  let h = parseFloat(document.getElementById('height').value)/100;
+  let bmi = w/(h*h);
+  document.getElementById('bmiResult').textContent = "Your BMI is " + bmi.toFixed(2);
 }
 </script>
-
 </body>
 </html>
